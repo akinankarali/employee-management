@@ -12,14 +12,7 @@ if (!['dev', 'prod'].includes(mode)) {
 }
 
 export default {
-  nodeResolve: {exportConditions: mode === 'dev' ? ['development'] : []},
-  preserveSymlinks: true,
-  plugins: [
-    legacyPlugin({
-      polyfills: {
-        // Manually imported in index.html file
-        webcomponents: false,
-      },
-    }),
-  ],
+  nodeResolve: true,
+  open: true,
+  watch: true
 };
